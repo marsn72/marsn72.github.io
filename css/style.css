@@ -1,0 +1,216 @@
+/* Переменные */
+
+:root{
+    --color-green: #76bc21;
+    --background-black-opacity: rgb(0,0,0,0.64);
+}
+/* Общие стили */
+
+a{
+    color: var(--color-green);
+    text-decoration: none;
+    transition: opacity .25s ease;
+}
+a:hover{
+    opacity: .7;
+}
+/* Header стили */
+
+.header{
+    height: 110vh;
+    background: url(../images/header_bg.jpeg) no-repeat center;
+    background-size: cover;
+    clip-path: polygon(100% 0, 100% 83%, 49% 100%, 0 85%, 0 0);
+}
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 80px;
+    color: #fff;
+    background-color: rgb(0,0,0,0.64);
+}
+.header-top a{
+    color: #fff;
+}
+.header-top a.active{
+    color: var(--color-green);
+}
+.logo {
+    font-size: 36px;
+}
+.navigation {
+}
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.menu-element {
+    margin-right: 10px;
+    font-size: 22px;
+}
+.menu-element:last-child {
+    margin-right: 0;
+}
+.menu-element__link {
+    transition: color 0.35s ease;
+}
+.menu-element__link:hover {
+    color: var(--color-green);
+}
+.switcher {
+}
+.header-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px);
+    color: #fff;
+}
+.header-center__wrapper{
+    padding: 20px 0 ;
+    width: 100%;
+    background: var(--background-black-opacity);
+    text-align: center;
+}
+.name {
+    font-size: 58px;
+    line-height: 74px;
+}
+.description {
+    font-size: 22px;
+}
+.about-me {
+}
+.left {
+}
+.right {
+}
+.about-me__title {
+}
+.about-me__description {
+}
+.gray {
+}
+.link {
+}
+.about-me__extra {
+}
+.about-me__extra-element {
+}
+.bold {
+}
+.block {
+}
+.achievements {
+}
+.second-title {
+}
+.achievements-list {
+}
+.achievements-list__element {
+}
+.skills {
+}
+.section-description {
+}
+.skills-filters {
+}
+.skill-filter {
+}
+.skills-wrapper {
+}
+.skills-list {
+}
+.skills-list__element {
+}
+.skill-card {
+}
+.skill-card__title {
+}
+.skill-card__image {
+}
+.skill-card__name {
+}
+.skill-card__progress {
+}
+.skill-card__progress-percent {
+}
+.skill-card__progress-bar {
+}
+.skill-card__description {
+}
+.work {
+}
+.work-wrapper {
+}
+.work-element {
+}
+.work-element__content {
+}
+.work-element__title {
+}
+.work-element__description {
+}
+.work-element__block-title {
+}
+.work-element__skills {
+}
+.work-element__skills-element {
+}
+.work-element__date {
+}
+.work-element__projects {
+}
+.work-element__projects-element {
+}
+.work-project {
+}
+.work-project__title {
+}
+.work-tooltip {
+}
+.work-project__description {
+}
+.interests {
+}
+.interest-wrapper {
+}
+.interest-image {
+}
+.interest-title {
+}
+.interest-text {
+}
+.books {
+}
+.books-list {
+}
+.books-list__element {
+}
+.contact-me {
+}
+.contact-me__form {
+}
+.input-wrapper {
+}
+.label {
+}
+.input {
+}
+.textarea-wrapper {
+}
+.textarea {
+}
+.submit {
+}
+.socials {
+}
+.social-element {
+}
+.social-element__link {
+}
+.footer-about {
+}
