@@ -74,6 +74,54 @@ a:hover{
     color: var(--color-green);
 }
 .switcher {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 35px;
+    width: 90px;
+    padding: 0 10px;
+    background: var(--color-green);
+    border-radius: 20px;
+    opacity: .9;
+    transition: opacity .25s ease;
+    cursor: pointer;
+}
+.switcher:hover{
+    opacity: 1;
+}
+.switcher::before{
+    content: '';
+    position: absolute;
+    left: 43px;
+    width: 40px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 20px;
+    z-index: 1;
+    transition: left .25s ease;
+}
+#lang:checked + .switcher::before{
+    left: 7px;
+}
+#lang:checked + .switcher span:first-child{
+    color: var(--color-green);
+}
+#lang:checked + .switcher span:last-child{
+    color: #fff;
+}
+.switcher span{
+    position: relative;
+    flex: 1 1 50%;
+    color: var(--color-green);
+    text-align: center;
+    z-index: 2;
+    transition: color .25s ease;
+}
+.switcher span:first-child{
+    color: #fff;
+}
+#lang{
+    display: none;
 }
 .header-center {
     position: relative;
