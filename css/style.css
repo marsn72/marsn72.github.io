@@ -73,12 +73,12 @@ a:hover{
 .menu-element__link:hover {
     color: var(--color-green);
 }
-.switcher {
+.switcher-wrapper {
     position: relative;
     display: flex;
     align-items: center;
     height: 35px;
-    width: 90px;
+    width: 135px;
     padding: 0 10px;
     background: var(--color-green);
     border-radius: 20px;
@@ -86,13 +86,13 @@ a:hover{
     transition: opacity .25s ease;
     cursor: pointer;
 }
-.switcher:hover{
+.switcher-wrapper:hover{
     opacity: 1;
 }
-.switcher::before{
+.switcher-wrapper::after{
     content: '';
     position: absolute;
-    left: 43px;
+    /* left: 47px; */
     width: 40px;
     height: 30px;
     background-color: #fff;
@@ -100,28 +100,30 @@ a:hover{
     z-index: 1;
     transition: left .25s ease;
 }
-#lang:checked + .switcher::before{
-    left: 7px;
+.switcher-wrapper input[type='radio']{
+    display: none;
 }
-#lang:checked + .switcher span:first-child{
-    color: var(--color-green);
-}
-#lang:checked + .switcher span:last-child{
-    color: #fff;
-}
-.switcher span{
+.switcher-wrapper .switcher{
     position: relative;
-    flex: 1 1 50%;
-    color: var(--color-green);
+    flex: 1 1 calc(100% / 3);
+    color: #fff;
     text-align: center;
     z-index: 2;
+    cursor: pointer;
     transition: color .25s ease;
 }
-.switcher span:first-child{
-    color: #fff;
+.switcher-wrapper input[type='radio']:checked + .switcher{
+    color: var(--color-green);
 }
-#lang{
-    display: none;
+
+.switcher-wrapper:has(input[type='radio']:nth-of-type(1):checked):after{
+    left: 9px;
+}
+.switcher-wrapper:has(input[type='radio']:nth-of-type(2):checked):after{
+    left: 47px;
+}
+.switcher-wrapper:has(input[type='radio']:nth-of-type(3):checked):after{
+    left: 86px;
 }
 .header-center {
     position: relative;
