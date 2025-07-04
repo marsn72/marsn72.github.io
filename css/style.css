@@ -14,10 +14,16 @@ a{
 a:hover{
     opacity: .7;
 }
+.block-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /* Header стили */
 
 .header{
     position: relative;
+    top: -80px;
     height: 110vh;
     clip-path: polygon(100% 0, 100% 83%, 49% 100%, 0 85%, 0 0);
 }
@@ -35,43 +41,53 @@ a:hover{
     z-index: 1;
 }
 .header-top {
-    position: relative;
+    position: sticky;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     height: 80px;
     color: #fff;
     background-color: rgb(0,0,0,0.64);
-    z-index: 2;
+    z-index: 3;
 }
-.header-top a{
+.header-top a.link{
     color: #fff;
 }
 .header-top a.active{
     color: var(--color-green);
 }
 .logo {
+    width: 167px;
     font-size: 36px;
 }
 .navigation {
 }
 .menu {
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-around; */
 }
 .menu-element {
-    margin-right: 10px;
+    margin-right: 25px;
     font-size: 22px;
 }
 .menu-element:last-child {
     margin-right: 0;
 }
-.menu-element__link {
+a.link.menu-element__link {
     transition: color 0.35s ease;
 }
-.menu-element__link:hover {
+a.link.menu-element__link:hover {
     color: var(--color-green);
+}
+.menu-element__link.home{
+    display: inline-flex;
+    width: 24px;
+    height: 24px;
+}
+.switcher-container{
+    width: 167px;
 }
 .switcher-wrapper {
     position: relative;
@@ -146,7 +162,34 @@ a:hover{
     line-height: 74px;
 }
 .description {
+    display: inline-block;
+    width: 77ch;
+    font-family: Courier, monospace;
     font-size: 22px;
+    line-height: 1.5em;
+    border-right: 3px solid transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: cursor 0.75s 8, print-text 5s steps(77);
+}
+@keyframes cursor {
+    0%{
+        border-color: #fff;
+    }
+    50%{
+        border-color: transparent;
+    }
+    100%{
+        border-color: #fff;
+    }
+}
+@keyframes print-text {
+    from{
+        width: 0;
+    }
+    to{
+        width: 77ch;
+    }
 }
 .about-me {
 }
