@@ -3,6 +3,8 @@
 :root{
     --color-green: #76bc21;
     --background-black-opacity: rgb(0,0,0,0.64);
+    --color-text: #7a7a7a;
+    --color-gray: #9e9e9e;
 }
 /* Общие стили */
 
@@ -18,6 +20,9 @@ a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.gray{
+    color: var(--color-gray);
 }
 /* Header стили */
 
@@ -191,23 +196,52 @@ a.link.menu-element__link:hover {
         width: 77ch;
     }
 }
+
+/* Секция обо мне */
+
 .about-me {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.left {
+.about-me .left {
+    flex: 1 1 40%;
 }
-.right {
+.about-me .right {
+    flex: 1 1 60%;
+}
+.about-me__image{
+    width: 350px;
+    margin-left: auto;
+    padding-right: 40px;
+    border-radius: 10px;
+    filter: blur(0.75px) drop-shadow(10px 10px 12px var(--background-black-opacity));
 }
 .about-me__title {
+    font-size: 36px;
 }
 .about-me__description {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: var(--color-text);
 }
-.gray {
+.about-me__description.gray {
+    color: var(--color-gray);
 }
 .link {
 }
 .about-me__extra {
+    color: var(--color-text);
+}
+.about-me__icon{
+    width: 24px;
+    height: 24px;
+}
+.about-me__icon svg{
+    color: var(--color-green);
 }
 .about-me__extra-element {
+    display: flex;
 }
 .bold {
 }
