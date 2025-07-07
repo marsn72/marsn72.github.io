@@ -32,6 +32,25 @@ a:hover{
 .block {
     display: block;
 }
+.second-title {
+    position: relative;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.second-title::after {
+    --underline-width: 60px;
+
+    position: absolute;
+    left: calc(50% - var(--underline-width) / 2);
+    bottom: -7px;
+    content: '';
+    display: inline-block;
+    height: 2px;
+    width: var(--underline-width);
+    background: var(--color-green);
+}
+
 /* Header стили */
 
 .header{
@@ -260,9 +279,8 @@ a.link.menu-element__link:hover {
 .about-me__extra-element:last-child {
     margin-bottom: 0;
 }
+
 .achievements {
-}
-.second-title {
 }
 .achievements-list {
 }
@@ -330,15 +348,42 @@ a.link.menu-element__link:hover {
 }
 .work-project__description {
 }
+
+/* Секция интересы */
+
 .interests {
+    padding: 40px 20px;
+}
+.interests__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 .interest-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    margin-bottom: 30px;
+    padding: 20px 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
 }
 .interest-image {
+    width: 250px;
+    margin-bottom: 20px;
 }
 .interest-title {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: var(--color-text-black);
 }
 .interest-text {
+    color: var(--color-text);
+    margin-bottom: 10px;
+}
+.interest-text:last-child{
+    margin-bottom: 0;
 }
 .books {
 }
